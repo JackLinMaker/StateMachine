@@ -7,12 +7,24 @@
 //
 
 #include <iostream>
+#include <unistd.h>
+#include "Miner.h"
+#include "EntityNames.h"
+#include "Location.h"
+using namespace std;
+
 
 int main(int argc, const char * argv[])
 {
 
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    Miner miner(ent_Miner_Bob);
+    
+    for(int i = 0; i < 20; ++i)
+    {
+        miner.Update();
+        usleep(800);
+        
+    }
     return 0;
 }
 
