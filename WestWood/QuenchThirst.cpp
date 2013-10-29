@@ -38,7 +38,7 @@ void QuenchThirst::Execute(Miner *pMiner)
         
         cout << "\n" << GetNameOfEntity(pMiner->ID()) << ": " << "That's mighty fine sippin liquer";
         
-        pMiner->ChangeState(EnterMineAndDigForNugget::Instance());
+        pMiner->GetFSM()->ChangeState(EnterMineAndDigForNugget::Instance());
     }
     else
     {

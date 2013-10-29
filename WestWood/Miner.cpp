@@ -7,7 +7,6 @@
 //
 
 #include "Miner.h"
-#include "State.h"
 #include "GoHomeAndSleepTillRested.h"
 #include "EnterMineAndDigForNugget.h"
 #include "VisitBankAndDepositGold.h"
@@ -18,27 +17,26 @@ Miner::Miner(int id):BaseGameEntity(id),
                     m_iGoldCarried(0),
                     m_iMoneyInBank(0),
                     m_iThirst(0),
-                    m_iFatigue(0),
-                    m_pCurrentState(GoHomeAndSleepTillRested::Instance())
+                    m_iFatigue(0)
 {
+    m_pStateMachine = new StateMachine<Miner>(this);
+    m_pStateMachine->SetCurrentState(GoHomeAndSleepTillRested::Instance());
+}
 
+Miner::~Miner()
+{
+    delete m_pStateMachine;
 }
 
 void Miner::Update()
 {
     m_iThirst += 1;
-    if(m_pCurrentState)
-    {
-        m_pCurrentState->Execute(this);
-    }
+    m_pStateMachine->Update();
 }
 
-void Miner::ChangeState(State *pNewState)
+StateMachine<Miner>* Miner::GetFSM() const
 {
-    assert(m_pCurrentState && pNewState);
-    m_pCurrentState->Exit(this);
-    m_pCurrentState = pNewState;
-    m_pCurrentState->Enter(this);
+    return m_pStateMachine;
 }
 
 location_type Miner::Location() const

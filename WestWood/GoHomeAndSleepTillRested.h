@@ -16,7 +16,7 @@
 #include "EntityNames.h"
 using namespace std;
 
-class GoHomeAndSleepTillRested : public State {
+class GoHomeAndSleepTillRested : public State<Miner> {
 public:
     static GoHomeAndSleepTillRested* Instance();
     

@@ -16,7 +16,7 @@
 #include "EntityNames.h"
 using namespace std;
 
-class VisitBankAndDepositGold : public State {
+class VisitBankAndDepositGold : public State<Miner> {
 public:
     static VisitBankAndDepositGold* Instance();
     

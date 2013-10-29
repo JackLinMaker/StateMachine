@@ -9,6 +9,7 @@
 #include <iostream>
 #include <unistd.h>
 #include "Miner.h"
+#include "MinersWife.h"
 #include "EntityNames.h"
 #include "Location.h"
 using namespace std;
@@ -17,11 +18,14 @@ using namespace std;
 int main(int argc, const char * argv[])
 {
 
-    Miner miner(ent_Miner_Bob);
+    Miner Bob(ent_Miner_Bob);
+    
+    MinersWife Elsa(ent_Elsa);
     
     for(int i = 0; i < 20; ++i)
     {
-        miner.Update();
+        Bob.Update();
+        Elsa.Update();
         usleep(800);
         
     }

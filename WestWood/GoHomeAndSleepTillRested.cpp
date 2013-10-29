@@ -37,7 +37,7 @@ void GoHomeAndSleepTillRested::Execute(Miner *pMiner)
         cout << "\n" << GetNameOfEntity(pMiner->ID()) << ": "
         << "What a God darn fantastic nap! Time to find more gold";
         
-        pMiner->ChangeState(EnterMineAndDigForNugget::Instance());
+        pMiner->GetFSM()->ChangeState(EnterMineAndDigForNugget::Instance());
     }else
     {
         pMiner->DecreaseFatigue();

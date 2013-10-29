@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>953B2F53-1B3F-4508-84BA-2C449DA75869</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WestWood</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B8031509-B1DF-417B-92C9-B39A0B879882</key>
+		<string>ssh://github.com/JackLinMaker/StateMachine.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WestWood.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B8031509-B1DF-417B-92C9-B39A0B879882</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/JackLinMaker/StateMachine.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B8031509-B1DF-417B-92C9-B39A0B879882</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B8031509-B1DF-417B-92C9-B39A0B879882</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WestWood</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -37,12 +37,12 @@ void EnterMineAndDigForNugget::Execute(Miner *pMiner)
     cout << "\n" << GetNameOfEntity(pMiner->ID()) << ": " << "Pickin' up a nugget.";
     if(pMiner->PocketsFull())
     {
-        pMiner->ChangeState(VisitBankAndDepositGold::Instance());
+        pMiner->GetFSM()->ChangeState(VisitBankAndDepositGold::Instance());
     }
     
     if(pMiner->Thirsty())
     {
-        pMiner->ChangeState(QuenchThirst::Instance());
+        pMiner->GetFSM()->ChangeState(QuenchThirst::Instance());
     }
 }
 

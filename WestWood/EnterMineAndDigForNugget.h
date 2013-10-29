@@ -11,12 +11,11 @@
 
 #include <iostream>
 #include "State.h"
-#include "Miner.h"
-#include "Location.h"
-#include "EntityNames.h"
 using namespace std;
 
-class EnterMineAndDigForNugget : public State {
+class Miner;
+
+class EnterMineAndDigForNugget : public State<Miner> {
 public:
     static EnterMineAndDigForNugget* Instance();
     

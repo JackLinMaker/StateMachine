@@ -45,11 +45,11 @@ void VisitBankAndDepositGold::Execute(Miner *pMiner)
         cout << "\n" << GetNameOfEntity(pMiner->ID()) << ": "
         << "WooHoo! Rich enough for now. Back home to mah li'lle lady";
         
-        pMiner->ChangeState(GoHomeAndSleepTillRested::Instance());
+        pMiner->GetFSM()->ChangeState(GoHomeAndSleepTillRested::Instance());
     }
     else
     {
-        pMiner->ChangeState(EnterMineAndDigForNugget::Instance());
+        pMiner->GetFSM()->ChangeState(EnterMineAndDigForNugget::Instance());
     }
 }
 

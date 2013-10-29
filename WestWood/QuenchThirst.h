@@ -14,9 +14,10 @@
 #include "Miner.h"
 #include "Location.h"
 #include "EntityNames.h"
+
 using namespace std;
 
-class QuenchThirst : public State {
+class QuenchThirst : public State<Miner> {
 public:
     static QuenchThirst* Instance();
     

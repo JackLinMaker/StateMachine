@@ -10,11 +10,13 @@
 #define __WestWood__Miner__
 
 #include <iostream>
-#include <assert.h>
+#include <string>
+#include <cassert>
 #include "BaseGameEntity.h"
 #include "Location.h"
+#include "StateMachine.h"
 
-class State;
+
 
 const int ComfortLevel = 5;
 const int MaxNuggets = 3;
@@ -27,13 +29,15 @@ class Miner : public BaseGameEntity {
 public:
     Miner(int ID);
     
+    ~Miner();
+    
     void Update();
     
-    void ChangeState(State* pNewState);
+    StateMachine<Miner>* GetFSM() const;
     
     location_type Location() const;
     
-    void ChangeLocation(const location_type newLocation);
+    void ChangeLocation(const location_type);
     
     int GoldCarried() const;
     
@@ -59,11 +63,16 @@ public:
     
     void BuyAndDrinkAWhiskey();
 private:
-    State* m_pCurrentState;
+    StateMachine<Miner>* m_pStateMachine;
+    
     location_type m_Location;
+    
     int m_iGoldCarried;
+    
     int m_iMoneyInBank;
+    
     int m_iThirst;
+    
     int m_iFatigue;
     
 };
