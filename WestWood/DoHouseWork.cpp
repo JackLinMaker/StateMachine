@@ -19,7 +19,7 @@ DoHouseWork* DoHouseWork::Instance()
 
 void DoHouseWork::Enter(MinersWife *wife)
 {
-
+    cout << "\n" << GetNameOfEntity(wife->ID()) << ": Time to do some more housework!";
 }
 
 void DoHouseWork::Execute(MinersWife *wife)
@@ -48,4 +48,9 @@ void DoHouseWork::Execute(MinersWife *wife)
 void DoHouseWork::Exit(MinersWife *wife)
 {
 
+}
+
+bool DoHouseWork::OnMessage(MinersWife *wife, const Telegram &msg)
+{
+    return false;
 }

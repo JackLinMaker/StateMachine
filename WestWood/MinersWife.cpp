@@ -10,7 +10,7 @@
 #include "DoHouseWork.h"
 #include "WifesGlobalState.h"
 
-MinersWife::MinersWife(int id):BaseGameEntity(id),m_Location(shack)
+MinersWife::MinersWife(int id):BaseGameEntity(id),m_Location(shack),m_bCooking(false)
 {
     m_pStateMachine = new StateMachine<MinersWife>(this);
     
@@ -29,6 +29,11 @@ void MinersWife::Update()
     m_pStateMachine->Update();
 }
 
+bool MinersWife::HandleMessage(const Telegram &msg)
+{
+    return m_pStateMachine->HandleMessage(msg);
+}
+
 StateMachine<MinersWife>* MinersWife::GetFSM() const
 {
     return m_pStateMachine;
@@ -43,3 +48,14 @@ void MinersWife::ChangeLocation(const location_type loc)
 {
     m_Location = loc;
 }
+
+bool MinersWife::Cooking() const
+{
+    return m_bCooking;
+}
+
+void MinersWife::SetCooking(bool val)
+{
+    m_bCooking = val;
+}
+

@@ -12,6 +12,7 @@
 #include <iostream>
 #include <assert.h>
 using namespace std;
+struct Telegram;
 
 class BaseGameEntity {
 public:
@@ -23,6 +24,7 @@ public:
     
     int ID() const;
     
+    virtual bool HandleMessage(const Telegram& msg) = 0;
     
     
 private:

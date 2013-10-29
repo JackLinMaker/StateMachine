@@ -25,6 +25,8 @@ public:
     virtual void Execute(Miner* pMiner);
     
     virtual void Exit(Miner* pMiner);
+    
+    virtual bool OnMessage(Miner* agent, const Telegram& msg);
 private:
     VisitBankAndDepositGold();
     

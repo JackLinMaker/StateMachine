@@ -11,6 +11,11 @@
 		E738E251181FA30A007156AA /* WifesGlobalState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E738E24F181FA30A007156AA /* WifesGlobalState.cpp */; };
 		E738E254181FA31B007156AA /* DoHouseWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E738E252181FA31B007156AA /* DoHouseWork.cpp */; };
 		E738E257181FA328007156AA /* VisitBathroom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E738E255181FA328007156AA /* VisitBathroom.cpp */; };
+		E738E25E181FADA0007156AA /* Telegram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E738E25C181FADA0007156AA /* Telegram.cpp */; };
+		E738E261181FB10A007156AA /* MessageDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E738E25F181FB10A007156AA /* MessageDispatcher.cpp */; };
+		E738E264181FB52D007156AA /* EntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E738E262181FB52D007156AA /* EntityManager.cpp */; };
+		E7CAE054181FE3FE00C00F57 /* EatStew.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7CAE052181FE3FE00C00F57 /* EatStew.cpp */; };
+		E7CAE057181FE70400C00F57 /* CookStew.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7CAE055181FE70400C00F57 /* CookStew.cpp */; };
 		E7D5EFB1181D47110032FAA7 /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7D5EFAF181D47110032FAA7 /* StateMachine.cpp */; };
 		E7E3F238181BF4C4002ADABC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E7E3F237181BF4C4002ADABC /* main.cpp */; };
 		E7E3F23A181BF4C4002ADABC /* WestWood.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E7E3F239181BF4C4002ADABC /* WestWood.1 */; };
@@ -46,6 +51,17 @@
 		E738E255181FA328007156AA /* VisitBathroom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisitBathroom.cpp; sourceTree = "<group>"; };
 		E738E256181FA328007156AA /* VisitBathroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitBathroom.h; sourceTree = "<group>"; };
 		E738E258181FA78A007156AA /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		E738E25C181FADA0007156AA /* Telegram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Telegram.cpp; sourceTree = "<group>"; };
+		E738E25D181FADA0007156AA /* Telegram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Telegram.h; sourceTree = "<group>"; };
+		E738E25F181FB10A007156AA /* MessageDispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MessageDispatcher.cpp; sourceTree = "<group>"; };
+		E738E260181FB10A007156AA /* MessageDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDispatcher.h; sourceTree = "<group>"; };
+		E738E262181FB52D007156AA /* EntityManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntityManager.cpp; sourceTree = "<group>"; };
+		E738E263181FB52D007156AA /* EntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityManager.h; sourceTree = "<group>"; };
+		E738E265181FBE38007156AA /* MessageTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTypes.h; sourceTree = "<group>"; };
+		E7CAE052181FE3FE00C00F57 /* EatStew.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EatStew.cpp; sourceTree = "<group>"; };
+		E7CAE053181FE3FE00C00F57 /* EatStew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatStew.h; sourceTree = "<group>"; };
+		E7CAE055181FE70400C00F57 /* CookStew.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CookStew.cpp; sourceTree = "<group>"; };
+		E7CAE056181FE70400C00F57 /* CookStew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookStew.h; sourceTree = "<group>"; };
 		E7D5EFAF181D47110032FAA7 /* StateMachine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StateMachine.cpp; sourceTree = "<group>"; };
 		E7D5EFB0181D47110032FAA7 /* StateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateMachine.h; sourceTree = "<group>"; };
 		E7E3F234181BF4C4002ADABC /* WestWood */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WestWood; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +116,8 @@
 				E7E3F245181BF681002ADABC /* Miner.h */,
 				E738E249181F8D0F007156AA /* MinersWife.cpp */,
 				E738E24A181F8D0F007156AA /* MinersWife.h */,
+				E738E262181FB52D007156AA /* EntityManager.cpp */,
+				E738E263181FB52D007156AA /* EntityManager.h */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -121,8 +139,34 @@
 				E738E253181FA31B007156AA /* DoHouseWork.h */,
 				E738E255181FA328007156AA /* VisitBathroom.cpp */,
 				E738E256181FA328007156AA /* VisitBathroom.h */,
+				E7CAE052181FE3FE00C00F57 /* EatStew.cpp */,
+				E7CAE053181FE3FE00C00F57 /* EatStew.h */,
+				E7CAE055181FE70400C00F57 /* CookStew.cpp */,
+				E7CAE056181FE70400C00F57 /* CookStew.h */,
 			);
 			name = State;
+			sourceTree = "<group>";
+		};
+		E738E259181FA9C6007156AA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E7E3F243181BF61B002ADABC /* EntityNames.h */,
+				E7E3F24A181BF740002ADABC /* Location.h */,
+				E738E258181FA78A007156AA /* Common.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		E738E25B181FAD71007156AA /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				E738E25C181FADA0007156AA /* Telegram.cpp */,
+				E738E25D181FADA0007156AA /* Telegram.h */,
+				E738E25F181FB10A007156AA /* MessageDispatcher.cpp */,
+				E738E260181FB10A007156AA /* MessageDispatcher.h */,
+				E738E265181FBE38007156AA /* MessageTypes.h */,
+			);
+			name = Message;
 			sourceTree = "<group>";
 		};
 		E7E3F22B181BF4C4002ADABC = {
@@ -144,14 +188,13 @@
 		E7E3F236181BF4C4002ADABC /* WestWood */ = {
 			isa = PBXGroup;
 			children = (
+				E738E25B181FAD71007156AA /* Message */,
+				E738E259181FA9C6007156AA /* Common */,
 				E738E24E181F8D39007156AA /* State */,
 				E738E24D181F8D23007156AA /* Entity */,
 				E738E24C181F8D17007156AA /* FSM */,
 				E7E3F237181BF4C4002ADABC /* main.cpp */,
 				E7E3F239181BF4C4002ADABC /* WestWood.1 */,
-				E7E3F243181BF61B002ADABC /* EntityNames.h */,
-				E7E3F24A181BF740002ADABC /* Location.h */,
-				E738E258181FA78A007156AA /* Common.h */,
 			);
 			path = WestWood;
 			sourceTree = "<group>";
@@ -207,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E738E25E181FADA0007156AA /* Telegram.cpp in Sources */,
 				E738E24B181F8D0F007156AA /* MinersWife.cpp in Sources */,
 				E7E3F250181C0A02002ADABC /* VisitBankAndDepositGold.cpp in Sources */,
 				E738E254181FA31B007156AA /* DoHouseWork.cpp in Sources */,
@@ -214,7 +258,11 @@
 				E7D5EFB1181D47110032FAA7 /* StateMachine.cpp in Sources */,
 				E7E3F238181BF4C4002ADABC /* main.cpp in Sources */,
 				E7E3F256181C0A1C002ADABC /* QuenchThirst.cpp in Sources */,
+				E738E261181FB10A007156AA /* MessageDispatcher.cpp in Sources */,
 				E738E257181FA328007156AA /* VisitBathroom.cpp in Sources */,
+				E7CAE057181FE70400C00F57 /* CookStew.cpp in Sources */,
+				E7CAE054181FE3FE00C00F57 /* EatStew.cpp in Sources */,
+				E738E264181FB52D007156AA /* EntityManager.cpp in Sources */,
 				E738E251181FA30A007156AA /* WifesGlobalState.cpp in Sources */,
 				E7E3F24D181C01A7002ADABC /* EnterMineAndDigForNugget.cpp in Sources */,
 				E7E3F242181BF4F6002ADABC /* BaseGameEntity.cpp in Sources */,

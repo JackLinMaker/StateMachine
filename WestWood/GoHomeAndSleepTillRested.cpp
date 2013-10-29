@@ -8,6 +8,9 @@
 
 #include "GoHomeAndSleepTillRested.h"
 #include "EnterMineAndDigForNugget.h"
+#include "EatStew.h"
+#include "MessageTypes.h"
+#include "MessageDispatcher.h"
 
 GoHomeAndSleepTillRested::GoHomeAndSleepTillRested()
 {
@@ -27,6 +30,12 @@ void GoHomeAndSleepTillRested::Enter(Miner *pMiner)
         cout << "\n" << GetNameOfEntity(pMiner->ID()) << ": " << "Walkin' home";
         
         pMiner->ChangeLocation(shack);
+        
+        Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
+                                  pMiner->ID(),        //ID of sender
+                                  ent_Elsa,            //ID of recipient
+                                  Msg_HiHoneyImHome,   //the message
+                                  NO_ADDITIONAL_INFO);
     }
 }
 
@@ -48,4 +57,17 @@ void GoHomeAndSleepTillRested::Execute(Miner *pMiner)
 void GoHomeAndSleepTillRested::Exit(Miner *pMiner)
 {
     cout << "\n" << GetNameOfEntity(pMiner->ID()) << ": " << "Leaving the house";
+}
+
+bool GoHomeAndSleepTillRested::OnMessage(Miner *agent, const Telegram &msg)
+{
+    switch (msg.Msg) {
+        case Msg_StewReady:
+            cout << "\nMessage handled by " << GetNameOfEntity(agent->ID())
+                << " at time: " << time(NULL);
+            cout << "\n" << GetNameOfEntity(agent->ID()) << ": okay , i'm comin!";
+            agent->GetFSM()->ChangeState(EatStew::Instance());
+            return true;
+    }
+    return false;
 }

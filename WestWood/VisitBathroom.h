@@ -23,6 +23,8 @@ public:
     virtual void Execute(MinersWife* wife);
     
     virtual void Exit(MinersWife* wife);
+    
+    virtual bool OnMessage(MinersWife* wife, const Telegram& msg);
 
 private:
     VisitBathroom(){}

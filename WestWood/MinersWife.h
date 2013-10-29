@@ -32,10 +32,18 @@ public:
     location_type Location() const;
     
     void ChangeLocation(const location_type loc);
+    
+    virtual bool HandleMessage(const Telegram& msg);
+    
+    bool Cooking() const;
+    
+    void SetCooking(bool val);
 private:
     StateMachine<MinersWife>* m_pStateMachine;
     
     location_type m_Location;
+    
+    bool m_bCooking;
 };
 
 #endif /* defined(__WestWood__MinersWife__) */

@@ -28,6 +28,11 @@ Miner::~Miner()
     delete m_pStateMachine;
 }
 
+bool Miner::HandleMessage(const Telegram &msg)
+{
+    return m_pStateMachine->HandleMessage(msg);
+}
+
 void Miner::Update()
 {
     m_iThirst += 1;

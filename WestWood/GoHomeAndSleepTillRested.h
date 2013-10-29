@@ -10,10 +10,12 @@
 #define __WestWood__GoHomeAndSleepTilRested__
 
 #include <iostream>
+#include <sys/time.h>
 #include "State.h"
 #include "Miner.h"
 #include "Location.h"
 #include "EntityNames.h"
+
 using namespace std;
 
 class GoHomeAndSleepTillRested : public State<Miner> {
@@ -25,6 +27,8 @@ public:
     virtual void Execute(Miner* pMiner);
     
     virtual void Exit(Miner* pMiner);
+    
+    virtual bool OnMessage(Miner* agent, const Telegram& msg);
 private:
     GoHomeAndSleepTillRested();
     

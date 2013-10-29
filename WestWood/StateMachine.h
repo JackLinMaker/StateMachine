@@ -14,6 +14,7 @@
 #include <string>
 
 #include "State.h"
+#include "Telegram.h"
 
 template <class entity_type>
 class StateMachine
@@ -46,6 +47,21 @@ public:
     {
         if(m_pGlobalState) m_pGlobalState->Execute(m_pOwner);
         if(m_pCurrentState) m_pCurrentState->Execute(m_pOwner);
+    }
+    
+    bool HandleMessage(const Telegram& msg) const
+    {
+        if(m_pCurrentState && m_pCurrentState->OnMessage(m_pOwner, msg))
+        {
+            return true;
+        }
+        
+        if(m_pGlobalState && m_pGlobalState->OnMessage(m_pOwner, msg))
+        {
+            return true;
+        }
+        
+        return false;
     }
     
     void ChangeState(State<entity_type>* pNewState)

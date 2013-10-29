@@ -16,6 +16,8 @@
 #include "Location.h"
 #include "StateMachine.h"
 
+struct Telegram;
+
 
 
 const int ComfortLevel = 5;
@@ -32,6 +34,8 @@ public:
     ~Miner();
     
     void Update();
+    
+    virtual bool HandleMessage(const Telegram& msg);
     
     StateMachine<Miner>* GetFSM() const;
     

@@ -7,28 +7,42 @@
 //
 
 #include <iostream>
+#include <sys/time.h>
 #include <unistd.h>
 #include "Miner.h"
 #include "MinersWife.h"
 #include "EntityNames.h"
 #include "Location.h"
+#include "MessageDispatcher.h"
+#include "EntityManager.h"
+
 using namespace std;
 
 
 int main(int argc, const char * argv[])
 {
+    srand((unsigned)time(NULL));
 
-    Miner Bob(ent_Miner_Bob);
+    Miner* Bob = new Miner(ent_Miner_Bob);
     
-    MinersWife Elsa(ent_Elsa);
+    MinersWife* Elsa = new MinersWife(ent_Elsa);
     
-    for(int i = 0; i < 20; ++i)
+    EntityMgr->RegisterEntity(Bob);
+    
+    EntityMgr->RegisterEntity(Elsa);
+    
+    for(int i = 0; i < 30; i++)
     {
-        Bob.Update();
-        Elsa.Update();
-        usleep(800);
+        Bob->Update();
         
+        Elsa->Update();
+        
+        Dispatch->DispatchDelayedMessage();
+        
+        usleep(800);
     }
+    delete Bob;
+    delete Elsa;
     return 0;
 }
 
